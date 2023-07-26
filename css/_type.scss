@@ -1,0 +1,41 @@
+// Laica
+
+@font-face {
+    font-family: "Laica";
+    font-weight: 300;
+    font-style: normal;
+    src: url(fonts/ABCLaica-Light-Trial.woff) format('woff'), 
+         url(fonts/ABCLaica-Light-Trial.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: "Laica";
+    font-weight: 300;
+    font-style: italic;
+    src: url(fonts/ABCLaica-LightItalic-Trial.woff) format('woff'), 
+         url(fonts/ABCLaica-LightItalic-Trial.woff2) format('woff2');
+}
+
+// Oracle
+
+@font-face {
+    font-family: "Oracle";
+    font-weight: 500;
+    font-style: normal;
+    src: url(fonts/ABCOracle-Book-Trial.woff) format('woff'), 
+         url(fonts/ABCOracle-Book-Trial.woff2) format('woff2');
+}
+
+// Stack
+
+$laica: "Laica","Helvetica","Georgia";
+$oracle: "Oracle", "Courier", "Arial";
+
+// Styles
+
+@mixin text-body() {
+    font-family: $oracle;
+    font-size: 15px;
+    line-height: 21px;
+    letter-spacing: 1%;
+}
