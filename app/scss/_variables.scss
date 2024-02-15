@@ -1,0 +1,65 @@
+// Colors
+
+$clr-text-pr: #0b0b0b;
+$clr-text-sc: rgba(11,11,11,.5);
+
+$clr-ui: rgba(11,11,11,.1);
+
+$clr-background: #fff;
+
+// Media Queries
+
+$mq-xlarge: 2560px;
+$mq-large: 1024px;
+$mq-medium: 600px;
+
+// Type Stacks
+
+$laica: "Laica","Helvetica","Georgia";
+$oracle: "Oracle", "Courier", "Times";
+$items: "Items", "Helvetica", "Arial";
+
+// Themes
+
+// $--theme-primary: --theme-primary;
+// $--theme-secondary: --theme-secondary;
+// $--theme-ui: --theme-ui;
+// $--theme-background: --theme-background;
+
+$themes: (
+  default: (
+    backgroundColor: blue,
+    textColor: #408bbd,
+    buttonTextColor: #408bbd,
+    buttonTextTransform: none,
+    buttonTextHoverColor: #61b0e7,
+    buttonColor: #fff,
+    buttonBorder: 2px solid #fff,
+  ),
+  wepresent: (
+    backgroundColor: #222,
+    textColor: #ddd,
+    buttonTextColor: #aaa,
+    buttonTextTransform: uppercase,
+    buttonTextHoverColor: #ddd,
+    buttonColor: #333,
+    buttonBorder: 1px solid #aaa,
+  ),
+);
+
+// Default Theme
+
+// $theme-map-default: (
+//     $--theme-primary: var($clr-text-pr),
+//     $--theme-secondary: var($clr-text-sc),
+//     $--theme-ui: var($clr-ui),
+//     $--theme-background: var($clr-background),
+// );
+
+// $theme-map-wepresent: (
+//     $--theme-primary: blue,
+//     $--theme-secondary: red,
+//     $--theme-ui: yellow,
+//     $--theme-background: pink,
+// );
+

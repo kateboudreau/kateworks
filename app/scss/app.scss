@@ -1,0 +1,137 @@
+@import 'reset';
+@import 'type';
+@import 'variables';
+@import 'themes';
+@import 'mixins';
+
+body {
+    // background-color: $clr-background;
+    margin: 30px;
+
+    @include themify($themes) {
+        background-color: themed('backgroundColor');
+    }
+
+    @include mq($mq-medium) {
+        margin: 40px;
+    }
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+
+    @include grid-layout();
+}
+
+.h-main, .n-main {
+    grid-row: 1 / 2;
+}
+
+.h-main {
+    @include text-body();
+
+    text-align: center;
+    grid-column: 1 / -1;
+
+    h1 {
+        color: $clr-text-pr;
+    }
+
+    p {
+        color: $clr-text-sc
+    }
+}
+
+.n-main {
+    grid-column: 4;
+    justify-self: end;
+
+    @include text-laica();
+    font-style: italic;
+
+    @include mq($mq-medium) {
+        grid-column: 6;
+    }
+
+    @include mq($mq-large) {
+        grid-column: 12;
+    }
+
+    a {
+        color: $clr-text-pr;
+        text-decoration: none;
+    }
+}
+
+.s-project-list {
+    grid-column: 1 / -1;
+    grid-row-start: 2;
+    margin: 60px 0;
+    max-width: 1000px;
+
+    .p-project-list {
+        text-align: center;
+    }
+
+    @include mq($mq-large) {
+        grid-column: 3 / 11;
+        margin: 70px 0;
+    }
+}
+
+.p-project-list {
+    @include text-items();
+}
+
+.s-cv-list {
+    grid-column: 1 / -1;
+    grid-row-start: 3;
+    // min-width: 300px;
+
+    @include mq($mq-medium) {
+        grid-column: 2 / 6;
+    }
+
+    @include mq($mq-large) {
+        grid-column: 5 / 9;
+    }
+}
+
+.rule-list-item {
+    @include text-body();
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    border-bottom: 1px solid $clr-ui;
+    padding: 20px 0;
+    // max-width: 500px;
+}
+
+.list-item-subtitle {
+    color: $clr-text-sc;
+}
+
+.btn-cta {
+    @include text-body();
+
+    grid-column: 1 / -1;
+    grid-row-start: 4;
+    margin: 40px 0;
+    justify-self: center;
+    padding: 14px 21px;
+    // background-color: $clr-text-pr;
+    border-radius: 100px;
+    border: 1px solid $clr-text-sc;
+
+    a {
+        text-decoration: none;
+        color: $clr-text-pr;
+    }
+
+    @include mq($mq-large) {
+        grid-column: 6 / 8;
+    }
+}
