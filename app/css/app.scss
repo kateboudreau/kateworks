@@ -5,12 +5,12 @@
 @import 'mixins';
 
 body {
-    // background-color: $clr-background;
+    background-color: $clr-background;
     margin: 30px;
 
-    @include themify($themes) {
-        background-color: themed('backgroundColor');
-    }
+    // @include themify($themes) {
+    //     background-color: themed('backgroundColor');
+    // }
 
     @include mq($mq-medium) {
         margin: 40px;
@@ -20,7 +20,6 @@ body {
 .container {
     position: relative;
     margin: 0 auto;
-    width: 100%;
 
     @include grid-layout();
 }
@@ -48,8 +47,8 @@ body {
     grid-column: 4;
     justify-self: end;
 
-    @include text-laica();
-    font-style: italic;
+    // @include text-laica();
+    // font-style: italic;
 
     @include mq($mq-medium) {
         grid-column: 6;
@@ -70,6 +69,7 @@ body {
     grid-row-start: 2;
     margin: 60px 0;
     max-width: 1000px;
+    color: $clr-text-sc;
 
     .p-project-list {
         text-align: center;
@@ -86,7 +86,7 @@ body {
 }
 
 .p-project-list {
-    @include text-items();
+    @include text-body();
 }
 
 .s-cv-list {
@@ -127,16 +127,21 @@ body {
     margin: 40px 0;
     justify-self: center;
     padding: 14px 21px;
-    // background-color: $clr-text-pr;
     border-radius: 100px;
     border: 1px solid $clr-text-sc;
-
-    a {
-        text-decoration: none;
-        color: $clr-text-pr;
-    }
+    text-decoration: none;
+    transition: 300ms cubic-bezier(0.19, 1, 0.22, 1);
+    background-color: $clr-text-pr;
+    color: $clr-background;
 
     @include mq($mq-large) {
         grid-column: 6 / 8;
+        color: $clr-text-pr;
+        background-color: $clr-background;
+
+        &:hover {
+            background-color: $clr-text-pr;
+            color: $clr-background;
+        }
     }
 }
