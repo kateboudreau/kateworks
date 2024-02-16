@@ -26,16 +26,11 @@
          url(fonts/ABCOracle-Book-Trial.woff2) format('woff2');
 }
 
-// Stack
+// Items
 
-$laica: "Laica","Helvetica","Georgia";
-$oracle: "Oracle", "Courier", "Arial";
-
-// Styles
-
-@mixin text-body() {
-    font-family: $oracle;
-    font-size: 15px;
-    line-height: 21px;
-    letter-spacing: 1%;
+@font-face {
+    font-family: "Items";
+    font-weight: 300;
+    font-style: normal;
+    src: url(fonts/ItemsDemo-Light.woff) format('woff');
 }

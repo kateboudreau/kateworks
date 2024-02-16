@@ -1,0 +1,76 @@
+@import 'variables';
+
+// Type Styles
+
+@mixin text-body() {
+    font-family: $oracle;
+    font-size: 15px;
+    line-height: 21px;
+    // letter-spacing: .015em;
+}
+
+@mixin text-laica() {
+    font-family: $laica;
+    font-size: 15px;
+    line-height: 21px;
+}
+
+@mixin text-items() {
+    font-family: $laica;
+    font-style: italic;
+    font-size: 28px;
+    line-height: 160%;
+    letter-spacing: -.025em;
+    
+    @include mq($mq-large) {
+        font-size: 42px;
+        line-height: 60px;
+    }
+}
+
+// Grid
+
+@mixin grid-layout() {
+    display: inline-grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    @include mq($mq-medium) {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    @include mq($mq-large) {
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    @include mq($mq-xlarge) {
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+// Media Query
+
+@mixin mq($width) {
+    @media (min-width: $width) {
+        @content;
+    }
+}
+
+// Theming
+
+// @mixin spread-map($map: ()) {
+//     @each $key, $value in $map {
+//         #{$key}: $value;
+//     }
+// }
+
+// @function theme-var($key, $fallback: null, $map: $theme-map-default) {
+//     @if not map-has-key($map, $key) {
+//         @error "key: '#{$key}', is not a key in map: #{$map}";
+//     }
+//     @if ($fallback) {
+//         @return var($key, $fallback);
+//     } @else {
+//         @return var($key);
+//     }
+// }
