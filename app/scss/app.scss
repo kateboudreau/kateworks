@@ -20,6 +20,7 @@ body {
 .container {
     position: relative;
     margin: 0 auto;
+    width: 100%;
 
     @include grid-layout();
 }
@@ -77,6 +78,10 @@ body {
     @include mq($mq-large) {
         grid-column: 3 / 11;
         margin: 70px 0;
+    }
+
+    @include mq($mq-xlarge) {
+        grid-column: 5 / 9;
     }
 }
 

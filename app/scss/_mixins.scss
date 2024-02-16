@@ -42,6 +42,10 @@
     @include mq($mq-large) {
         grid-template-columns: repeat(12, 1fr);
     }
+
+    @include mq($mq-xlarge) {
+        grid-template-columns: repeat(12, 1fr);
+    }
 }
 
 // Media Query
@@ -54,19 +58,19 @@
 
 // Theming
 
-@mixin spread-map($map: ()) {
-    @each $key, $value in $map {
-        #{$key}: $value;
-    }
-}
+// @mixin spread-map($map: ()) {
+//     @each $key, $value in $map {
+//         #{$key}: $value;
+//     }
+// }
 
-@function theme-var($key, $fallback: null, $map: $theme-map-default) {
-    @if not map-has-key($map, $key) {
-        @error "key: '#{$key}', is not a key in map: #{$map}";
-    }
-    @if ($fallback) {
-        @return var($key, $fallback);
-    } @else {
-        @return var($key);
-    }
-}
+// @function theme-var($key, $fallback: null, $map: $theme-map-default) {
+//     @if not map-has-key($map, $key) {
+//         @error "key: '#{$key}', is not a key in map: #{$map}";
+//     }
+//     @if ($fallback) {
+//         @return var($key, $fallback);
+//     } @else {
+//         @return var($key);
+//     }
+// }
