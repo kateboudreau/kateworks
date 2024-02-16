@@ -67,7 +67,7 @@ body {
 .s-project-list {
     grid-column: 1 / -1;
     grid-row-start: 2;
-    margin: 60px 0;
+    margin: 20px 0;
     max-width: 1000px;
     color: $clr-text-sc;
 
@@ -75,13 +75,18 @@ body {
         text-align: center;
     }
 
+    @include mq($mq-medium) {
+        grid-column: 2 / 6;
+        margin: 70px 0;
+    }
+
     @include mq($mq-large) {
-        grid-column: 3 / 11;
+        grid-column: 5 / 9; // 3 / 11
         margin: 70px 0;
     }
 
     @include mq($mq-xlarge) {
-        grid-column: 5 / 9;
+        grid-column: 6 / 8;
     }
 }
 
@@ -100,6 +105,10 @@ body {
 
     @include mq($mq-large) {
         grid-column: 5 / 9;
+    }
+
+    @include mq($mq-xlarge) {
+        grid-column: 6 / 8;
     }
 }
 
